@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() {
+<<<<<<< HEAD
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+=======
+  runApp( MyApp());
+}
+
+class MyApp extends StatefulWidget {
+   MyApp({super.key});
+>>>>>>> 46ad7f595563d38323f47704f66756ea2d86b226
 
   @override
+  State<MyApp> createState() => _MyAppState();
+  
+}
+
+
+
+class _MyAppState extends State<MyApp> {
+  String title = "Login" ;
+  TextEditingController inputTextController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return const MaterialApp(
       home: LoginScreen(), 
     );
@@ -68,8 +87,47 @@ class _LoginScreenState extends State<LoginScreen> {
               child: const Text("Ingresar"),
             ),
           ],
+=======
+    return MaterialApp(
+    home: Scaffold ( 
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(title,style: TextStyle(fontSize: 24),),
+        SizedBox(height: 20,), 
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+        child: TextField(
+          controller: inputTextController,
+          keyboardType: TextInputType.datetime,
+          decoration: InputDecoration(
+            hintText: "Escribe aqui",
+            border: OutlineInputBorder(),
+          ),
+        )
+>>>>>>> 46ad7f595563d38323f47704f66756ea2d86b226
         ),
-      ),
-    );
+        SizedBox(height: 20,),
+        ElevatedButton(onPressed: () {
+          String inputText = inputTextController.text;
+          if(inputText == 'Hola'){
+            title = 'Hello';
+
+          }else{
+            title = inputText;
+          }
+          title = inputText;
+
+          setState((){});
+        }
+        
+        , child: Text ("Aceptar"))
+
+      ],)  
+    )
+
+      );
+      
   }
 }
+
