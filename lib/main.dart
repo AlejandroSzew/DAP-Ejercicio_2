@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-<<<<<<< HEAD
+
   runApp(const MyApp());
 }
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
 class MyApp extends StatefulWidget {
    MyApp({super.key});
->>>>>>> 46ad7f595563d38323f47704f66756ea2d86b226
+
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
   TextEditingController inputTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
+
     return const MaterialApp(
       home: LoginScreen(), 
     );
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: const Text("Ingresar"),
             ),
           ],
-=======
+
     return MaterialApp(
     home: Scaffold ( 
     body: Column(
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
             border: OutlineInputBorder(),
           ),
         )
->>>>>>> 46ad7f595563d38323f47704f66756ea2d86b226
+
         ),
         SizedBox(height: 20,),
         ElevatedButton(onPressed: () {
