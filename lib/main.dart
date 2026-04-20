@@ -52,6 +52,10 @@ class _MyAppState extends State<MyApp> {
                     setState(() {
                       title = "Bienvenido";
                     });
+                  } if (userController.isEmpmty() || pass.Controller.isEmpty()){
+                     ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Por favor completa todos los campos")),
+                    );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text("Login incorrecto")),
